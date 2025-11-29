@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Proton prefix registry file
-SYSTEM_REG="/home/deck/.local/share/Steam/steamapps/compatdata/22380/pfx/system.reg"
+SYSTEM_REG="/home/deck/.local/share/Steam/steamapps/compatdata/22370/pfx/system.reg"
 
 # Check that system.reg exists
 if [[ ! -f "$SYSTEM_REG" ]]; then
@@ -19,10 +19,10 @@ LINUX_PATH="$(pwd)"
 PROTON_PATH="Z:${LINUX_PATH//\//\\\\}\\\\"
 
 # Registry header
-HEADER='[Software\\Wow6432Node\\Bethesda Softworks\\FalloutNV]'
+HEADER='[Software\\Wow6432Node\\Bethesda Softworks\\Fallout3]'
 
 # Remove any existing block for FalloutNV
-sed -i '/\[Software\\\\Wow6432Node\\\\Bethesda Softworks\\\\FalloutNV\]/,/^$/d' "$SYSTEM_REG"
+sed -i '/\[Software\\\\Wow6432Node\\\\Bethesda Softworks\\\\Fallout3\]/,/^$/d' "$SYSTEM_REG"
 
 # Append a fresh, clean block
 {
